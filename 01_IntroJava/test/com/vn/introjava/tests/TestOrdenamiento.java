@@ -5,7 +5,7 @@
  */
 package com.vn.introjava.tests;
 
-import static com.vn.introjava.Ordenamiento.ordenarArray;
+import static com.vn.introjava.funcionesbasicas.Ordenamiento.ordenarArray;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;

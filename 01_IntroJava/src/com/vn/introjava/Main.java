@@ -4,8 +4,8 @@
  * and open the template in the editor.
  */
 package com.vn.introjava;
-import static com.vn.introjava.EstructurasControl.*;
-import static com.vn.introjava.Ordenamiento.*;
+import static com.vn.introjava.funcionesbasicas.EstructurasControl.*;
+import static com.vn.introjava.funcionesbasicas.Ordenamiento.*;
 
 public class Main {
 
