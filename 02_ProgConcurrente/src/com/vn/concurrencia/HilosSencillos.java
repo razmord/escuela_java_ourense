@@ -10,7 +10,7 @@ package com.vn.concurrencia;
  * @author Equipo 5
  */
 public class HilosSencillos {
-    static int contadorCompartido=0;
+    static int contadorCompartido;
     HiloA hiloA;
     HiloB hiloB;
     public HilosSencillos(){
@@ -22,9 +22,11 @@ public class HilosSencillos {
         @Override
         public void run() {
             for(int i=0;i<5000;i++){
-                System.out.println("Instruccion A "+i+ " contador "+contadorCompartido);
                 contadorCompartido++;
+                System.out.println("Instruccion A "+i+ " contador "+contadorCompartido);
+               
             }
+            System.out.println("Contador Final A "+contadorCompartido);
          }
     }
     class HiloB implements Runnable {
@@ -32,9 +34,10 @@ public class HilosSencillos {
         @Override
         public void run() {
             for(int i=0;i<8000;i++){
-                System.out.println("Inst### B "+i+ " contador "+contadorCompartido);
                 contadorCompartido++;
+                System.out.println("Inst### B "+i+ " contador "+contadorCompartido);
             }
+            System.out.println("Contador Final B "+contadorCompartido);
         }
     }
     
