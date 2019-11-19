@@ -5,10 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Estructura típica HTML5</title>
+    <style>
+            /*selector*/
+            *{
+                margin:0px;
+                padding:0px;
+            }
+            body{
+                background-color:green;
+            }
+            ul{
+                margin:20px;
+                background-color: chocolate;
+            }
+            h1{
+                background-color: turquoise;
+                color:wheat;
+            }
+            header{
+                background-color: red;
+            }
+            article > section{
+                background-color: violet;
+            }
+            .azul-chillon{
+                background-color: cyan;
+            }
+            img{
+                height: 40%;
+                width: 40%;
+            }      @media screen and (max-width:920px){
+            article section{
+                width:40%;
+                display: inline-block;
+                border:burlywood solid;
+            } }@media screen and (min-width:919px){
+            article section{
+                width:80%;
+                display: inline-block;
+                border:blue dashed;
+            }}
+        </style>
 </head>
 <body>
     <header>
-        <img src="EJVd3-9XkAEfybt.jpg" style="width:140px;height: 100px" alt="Sasuke Uchiha"/>
+       
         <h1>Título de la web</h1>
         <nav>
             <ul>
@@ -24,7 +65,7 @@
         <h2>Encabezado nivel 2, como título secundario</h2>
         <h3>Encabezado nivel 3, otros títulos</h3>
         <article>
-            <h4>Aquí iría un artículo</h4>
+            <h4 class="azul-chillon">Aquí iría un artículo</h4>
             Con el texto que sea bla bla bla... 
         </article>
         <article>
@@ -50,6 +91,7 @@
                     </tr>
             </table>
     </section>
+    <img src="Zafina_T7_HD.jpg" alt="Zafina in Tekken 7"/>
     <aside>
         <p>Típico submenú con enlaces de interés</p>
         <ul>

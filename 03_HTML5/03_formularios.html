@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="container">
+        <div class="row">
+            <h1 class="offset-2 col-8">Formularios HTML5:</h1>
+            <div class="offset-2 col-8 row">
+                <form id="form-registro" name="form_registro" action="#" method="get" class="form">
+                    <div class="form-group">
+                        <label >Nombre: </label> <input id="nombre" name="nombre" maxlength="10" required="requires" />
+                    </div>
+                    <div class="form-group">
+                        <label ">Apellidos: </label> <input id="apellidos" name="apellidos" maxlength="20" class="form-control" value="Valor por defecto" />
+                    </div>
+                    <div class="form-group">
+                        <label>Edad: </label> <input name="edad" type="number" required="requires" min="12" max="38" class="form-control" step="5" value="24" placeholder="Texto de fondo aclaratorio" />
+                    </div>
+                    <div class="form-group">
+                        <label class="col-4">Fecha: </label> <input type="date" class="col-8" size="30" />
+                    </div>
+                    <div class="form-group">
+                        <label>E-mail: </label> <input type="email" size="30" required="requires" maxlength="255" placeholder="Introduzca email valido" class="form-control" />
+                    </div>
+                    <div class="form-group row">
+                        <input type="reset" value="Limpiar" class="btn btn-primary col-4"/>
+                        <input type="button" value="Rellenar"  class="btn btn-primary col-4" onclick="document.forms.form_registro.nombre.value='Renekton'"/>
+                        <input type="submit" value="Enviar"  class="btn btn-primary col-4"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
