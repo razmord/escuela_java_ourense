@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .div-marco{
+            border:blue solid;
+            background-color: lightgray;
+        }
+        .fondo-body{
+            background-color: lightgreen;
+        }
+        img{
+                height: 40%;
+                width: 40%;
+            }
+    </style>
+</head>
+<body>
+    <input id="btn_xrd" type="button"/>
+    <div id="componente_eventos"><label>Evento con listener</label>
+    <input id="input_listo"/>
+    <input id="btn_listo" type="button"/>
+    <br/>
+    <div id="info_evento_listo"></div>
+    </div>
+    <br/>
+    <label>Evento con listener</label>
+    <input id="input_otro"/>
+    <input id="btn_otro" type="button"/>
+    <br/>
+    <div id="info_evento_otro"></div>
+    <div onclick="alert('Llamada evento desde HTML');">Zona onclick alrt.....</div>
+    <div id="quiereUnClick"> zona quiereclick</div>
+    <script>
+        function GestorEventosES5(inputId,btnId,divId){
+            this.input=document.getElementById(inputId);
+            this.boton=document.getElementById(btnId);
+            this.divInfo =document.getElementById(divId);
+            this.funCallbkAlPulsar = function(evento){
+                this.input.value="Tipo evento: " + evento.type;
+                if(this.divInfo.innerHTML!="")
+                    this.divInfo.innerHTML="";
+                else
+                    this.divInfo.innerHTML="<img src=\"Zafina_T7_HD.jpg\" alt=\"Zafina in Tekken 7\"/>";
+            }
+            this.funCallbkAlPulsar2= (evento)=>{
+                this.input.style="background-color:lightblue";
+            }
+            this.boton.addEventListener("click",this.funCallbkAlPulsar.bind(this));
+        }
+    </script>
+    <script>
+        window.addEventListener("load",function(){
+            let quiereUnClick=document.getElementById("quiereUnClick");
+            quiereUnClick.onclick=function(evento){
+                alert("'Llamada evento desde JS, propiedad .onclick'")
+            }
+            let gestorEv =new GestorEventosES5("input_listo","btn_listo","info_evento_listo");
+            let gestorEvOtro =new GestorEventosES5("input_otro","btn_otro","info_evento_otro");
+        });
+        
+    </script>
+</body>
+</html>

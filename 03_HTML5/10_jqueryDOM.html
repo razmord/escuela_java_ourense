@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estructura típica HTML5</title>
+    <style>
+        /*selector*/
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        /* selector de etiqueta */
+        body {
+            background-color: #DDEEFF;
+            /* RGB */
+            font-size: 1.2em;
+            /* Propiedad que se hereda de padres a hijos */
+        }
+
+        header {
+            background-color: rgb(182, 202, 221);
+        }
+
+        /* selector varios */
+        h1,
+        h2,
+        h3 {
+            background-color: rgb(168, 200, 233);
+        }
+    
+        /* section descendiente de article */
+        article section {
+            background-color: red;
+            width: 80%;
+            /* 25 % */
+        }
+
+        /* section descendiente de article */
+        article>section {
+            margin: 20px;
+            background-color: red;
+            width: 100px;
+        }
+
+        /* clase azul chillón */
+        .azul-chillon {
+            height: 50px;
+            /* 50 pixeles */
+            background-color: blue;
+        }
+
+        /* Selector */
+        #enlace-menu,
+        #enlace-css {
+            color: red;
+        }
+
+        a:hover {
+            background-color: yellow;
+        }
+
+        .elemento-menu {
+            display: inline;
+            /* display: forma de mostrar, none para NO mostrar */
+        }
+
+        .titulo {
+            /* Posición relativa a donde debería estar */
+            position: relative;
+            left: 5px;
+            top: 5px;
+            display: inline-block;
+        }
+
+        .marco-colocado {
+            display: inline-block;
+            width: 400px;
+        }
+
+        /* Media queries, condiciones para seleccionar qué 
+    etilos se aplican a qué dispositivos */
+        .articulo {
+            border: black solid;
+        }
+
+        /* On screens that are 992px or less, set the background color to blue */
+        @media screen and (max-width: 992px) {
+            article section {
+                width: 40%;
+                display: inline-block;
+                border: burlywood solid;
+            }
+        }
+
+        @media screen and (min-width: 991px) {
+            article section {
+                width: 80%;
+                display: inline-block;
+                border: blue solid;
+            }
+        }
+
+        img {
+            height: 40%;
+            width: 40%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <h1>Título de la web</h1>
+        <nav>
+            <ul>
+                <li><a href="01_estructura_html5.html">Menú principal</a></li>
+                <li><a href="02_ejemplos_css3.html">Ejemplos</a></li>
+                <li><a href="03_formularios.html">Formularios</a></li>
+                <li><a href="04_ejemplos_js.html">Webs dinámicas con JS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <nav id="otro_menu">Otro menú</nav>
+    <section>
+        <h2>Encabezado nivel 2, como título secundario</h2>
+        <h3>Encabezado nivel 3, otros títulos</h3>
+        <article>
+
+            <h3>General Champion Balance</h3>
+            <h4 class="change-detail-title">Tier 1 </h4>
+            <ul>
+                <li>Ivern Shield: 200/400/600 ⇒ 200/350/500</li>
+                <li>Maokai Passive Heal: 100/200/300 ⇒ 100/175/250</li>
+                <li>Nasus Ability Damage: 35/70/105 ⇒ 50/70/90</li>
+                <li>Nasus Ability Bonus Health: 200/400/600 ⇒ 250/400/550</li>
+                <li>Taliyah Mana: 50/85 ⇒ 50/80</li>
+                <li>Taliyah Ability Stun Duration: 1.5 ⇒ 2</li>
+                <li>Vayne Ability Damage: 8%/12%/16% ⇒ 9%/12%/15%</li>
+                <li>Vladimir Ability Damage and Heal Amount: 200/350/500 ⇒ 200/325/450</li>
+            </ul>
+            <hr class="divider">
+            <h4 class="change-detail-title">Tier 2</h4>
+            <ul>
+                <li>Malzahar Minion Health: 300 ⇒ 250</li>
+                <li>Rek’Sai Ability Damage: 200/550/900 ⇒ 250/550/850</li>
+                <li>Skarner Mana: 0/75 ⇒ 0/65</li>
+                <li>Skarner Armor: 30 ⇒ 35</li>
+                <li>Thresh Ability Shield: 200/300/400 ⇒ 250/400/600</li>
+                <li>Yasuo Ability Hits: 3/5/7 ⇒ 4/5/6</li>
+            </ul>
+            <hr class="divider">
+            <h4 class="change-detail-title">Tier 3</h4>
+            <ul>
+                <li> Ezreal Mana: 0/40 ⇒ 0/30</li>
+                <li> Ezreal Ability Cast Time: 0.5 ⇒ 0.25</li>
+            </ul>
+            <hr class="divider">
+            <h4 class="change-detail-title">Tier 4</h4>
+            <ul>
+                <li> Ashe Attack Speed: 0.7 ⇒ 0.8</li>
+                <li> Brand Ability Damage: 250/450/650 ⇒ 300/450/600</li>
+                <li> Brand Bounces: 4/6/20 ⇒ 5/6/20</li>
+                <li> Malphite HP: 800 ⇒ 850</li>
+                <li> Olaf Mana: 0/75 ⇒ 0/90</li>
+                <li> Yorick Ghoul Health: 750/1250/1750 ⇒ 600/1000/1400</li>
+                <li> Yorick Ghoul Attack Speed: 0.8 ⇒ 0.7</li>
+            </ul>
+            <hr class="divider">
+            <h4 class="change-detail-title">Tier 5</h4>
+            <ul>
+                <li> Singed Health: 1050 ⇒ 950</li>
+                <li> Singed Ability Damage: 250/500/2000 ⇒ 200/400/2000</li>
+                <li> Taric Health: 850 ⇒ 900</li>
+            </ul>
+        </article>
+        <article>
+            <h3>Item Balance</h3>
+            <ul>
+                <li>Frozen Heart Attack Speed Slow: 35% ⇒ 25%</li>
+                <li>Guardian Angel: Can no longer be healed during the resurrecting state.</li>
+                <li>Iceborne Gauntlet Attack Speed Slow: 35% ⇒ 25%</li>
+                <li>Ionic Spark Damage: 100 ⇒ 90</li>
+            </ul>
+        </article>
+        <article>
+            <h3>Bugfixes</h3>
+            <h4 class="change-detail-title">General</h4>
+            <ul>
+                <li>General improvements to melee unit pathing. </li>
+                <li>Spooky, invisible Woodland units no longer erroneously add to Trait bonuses</li>
+                <li>All PVE small monsters are now properly considered 1-star.</li>
+                <li>All summons are now properly considered 0-star.</li>
+                <li>Dragon/Elder Dragon/Rift Herald are now properly considered 3-star.</li>
+                <li>Ranged Berserkers (via Rapid Firecannon or Berserker’s Axe) now properly deal damage emanating in a
+                    cone from their target instead of themselves.</li>
+                <li>Fixed a few height bugs on Freljord Arenas. Items and champions should no longer get buried in the
+                    terrain.</li>
+                <li>The Electric trait no longer benefits from Ability Power, and no longer feeds into Hextech Gunblade.
+                </li>
+            </ul>
+            <hr class="divider">
+            <h4 class="change-detail-title">Tier 1 Champions</h4>
+            <ul>
+                <li>Diana's orbs can no longer hit multiple targets each.</li>
+                <li>Kog’Maw's ability adjusted to miss far less often.</li>
+                <li>Renekton’s ability now properly deals Magic Damage (tooltip to be updated next patch).</li>
+                <li>Fixed healing text on Vlad to show the proper amount.</li>
+                <li>Zyra’s plants attack speed and duration now match their intended amount.</li>
+                <li>Zyra plants no longer occasionally hop into your bench.</li>
+            </ul>
+            <hr class="divider">
+            <h4 class="change-detail-title">Tier 2 Champions</h4>
+            <ul>
+                <li>Malzahar's minions attack speed now matches attack speed ratio. (This results in a slight reduction
+                    of Malz Minion AS)</li>
+                <li>Volibear’s ability now also restores him to full mana if a non-execute cast kills the target.</li>
+            </ul>
+            <hr class="divider">
+            <h4 class="change-detail-title">Tier 3 Champions</h4>
+            <ul>
+                <li>Azir no longer summons soldiers adjacent to untargetable units like Zyra plants.</li>
+                <li>Dr. Mundo won’t cast his ability when there’s nothing in range that it could hit.</li>
+                <li>Qiyana won’t cast her ability when there’s nothing in range that it could hit.</li>
+                <li>Clarified Veigar’s tooltip that it instantly kills lower star targets.</li>
+                <li>Veigar’s ability now executes non-champions if their star level is below his.</li>
+            </ul>
+            <hr class="divider">
+            <h4 class="change-detail-title">Tier 4 Champions</h4>
+            <ul>
+                <li>Annie can no longer gain mana if she summons two Tibbers (Mage’s Cap), then one of them dies.</li>
+                <li>Fixed Ashe’s three-star Scaling to be the intended 250% value</li>
+                <li>Fixed an issue where Ashe could not proc Blademaster while her ability was active</li>
+                <li>Fixed Olaf and Singed looking like they were glacial’d, even though they were still attacking</li>
+            </ul>
+            <hr class="divider">
+            <h4 class="change-detail-title">Tier 5 Units</h4>
+            <ul>
+                <li>Champions can now properly take damage from multiple poison trails created by different copies of
+                    Singed.</li>
+                <li>Zed’s clones now properly attribute damage to Zed in the damage tracker.</li>
+            </ul>
+            <hr class="divider">
+            <h4 class="change-detail-title">Items</h4>
+            <ul>
+                <li>Dragon's Claw now also reduces magic damage received from non-ability effects (Items, Traits, etc.)
+                </li>
+                <li>Fixed Iceborn Gauntlet’s attack speed slow occasionally persisting across rounds</li>
+                <li>Inferno Cinder now properly works on: Renekton, Jax, Rek’Sai, Vayne, and Nami’s Tidal Wave empowered
+                    attacks</li>
+                <li>Spatula items now correctly no longer double the non-spatula component’s stats</li>
+                <li>Talisman of Light now correctly grants Magic Resist </li>
+            </ul>
+        </article>
+        <article>
+            <h4>Aquí iría otro artículo</h4>
+            Con otro texto que sea bla bla bla...
+            <section>Una parte del articulo</section>
+            <section>Otra parte del articulo</section>
+            <video src="Ejemplo_de_video.mp4" controls="true"></video>
+        </article>
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+                <th>Contacto</th>
+            </tr>
+            <tr>
+                <td>Sol</td>
+                <td>Badguy</td>
+                <td>40</td>
+                <td><a href="mailto://ana.perez@vn.com">Enviar email</a></td>
+            </tr>
+            <tr>
+                <td>Ky</td>
+                <td>Kiske</td>
+                <td>41</td>
+                <td><a href="tel://910001122">Llamar por teléfono</a></td>
+            </tr>
+            <tr>
+                <td>Chipp</td>
+                <td>Zanuff</td>
+                <td>40</td>
+                <td><a href="mailto://ana.perez@vn.com">Enviar email</a></td>
+            </tr>
+            <tr>
+                <td>May</td>
+                <td></td>
+                <td>40</td>
+                <td><a href="mailto://ana.perez@vn.com">Enviar email</a></td>
+            </tr>
+            <tr>
+                <td>Axl</td>
+                <td>Low</td>
+                <td>40</td>
+                <td><a href="mailto://ana.perez@vn.com">Enviar email</a></td>
+            </tr>
+        </table>
+    </section>
+    <img src="Zafina_T7_HD.jpg" alt="Zafina in Tekken 7" />
+    <aside>
+        <p>Típico submenú con enlaces de interés</p>
+        <ul>
+            <li><a href="https://www.w3schools.com">www.w3schools.com/</a></li>
+            <li><a href="https://developer.mozilla.org/es/">Web Mozilla</a></li>
+        </ul>
+    </aside>
+    <footer class="articulo">Pié de página
+        <nav>
+            <ul>
+                <li>Enlaces a RR.SS</li>
+            </ul>
+        </nav>
+        <address>Avenida Buenos Aires, 40. tu ru rú</address>
+    </footer>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/10_jqueryDOM.js"></script>
+</body>
+
+</html>
