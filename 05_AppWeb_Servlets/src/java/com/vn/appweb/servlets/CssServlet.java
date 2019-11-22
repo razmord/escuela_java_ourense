@@ -29,6 +29,12 @@ public class CssServlet extends HttpServlet {
                 + "ul{"
                 + "background-color:lightblue;"
                 + "}");
+        for (int i=0;i<10;i++){
+            salida.print("#listado-"+i+"{"
+                    + "font-size:"+(i*0.3)+"em;"
+                            + "}");
         }
+        }
+        
     }
 }
