@@ -33,3 +33,14 @@ nbdist/
 .nb-gradle/
 
 #TODO: Ficheros de Eclipse, de VSCode...
+demo
+docs
+javadoc
+test
+index.html
+KEYS
+LICENSE
+NOTICE
+RELEASE-NOTES.html
+bin
+derby__bbdd
