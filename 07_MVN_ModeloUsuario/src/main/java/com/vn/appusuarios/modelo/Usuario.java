@@ -5,11 +5,13 @@
  */
 package com.vn.appusuarios.modelo;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Equipo 6
  */
-public class Usuario {
+public class Usuario implements Serializable {
     
     private int id;
     private String email;

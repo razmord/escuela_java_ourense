@@ -12,7 +12,7 @@ public class ConexionDerbyDB {
     
     private static void cargarDrivers() throws SQLException, ClassNotFoundException {
     	 Class.forName("org.apache.derby.jdbc.ClientDriver");
-         DriverManager.registerDriver(new org.apache.derby.jdbc.EmbeddedDriver());
+//         DriverManager.registerDriver(new org.apache.derby.jdbc.EmbeddedDriver());
     }
     public static Connection obtenerConexion() throws SQLException, ClassNotFoundException {
     	if(! driversCargados) {

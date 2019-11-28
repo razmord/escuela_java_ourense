@@ -116,8 +116,7 @@ public class DaoUsuario implements IDaoUsuario {
 
             while (resultado.next()) {
 
-                System.out.println("Id: " + resultado.getInt("id") + " Nombre: " + resultado.getString("nombre") + " Email: " + resultado.getString("email"
-                        + "Edad: " + resultado.getInt("edad")));
+                System.out.println("Id: " + resultado.getInt("id") + " Nombre: " + resultado.getString("nombre") + " Email: " + resultado.getString("email")+ " Edad: " + resultado.getInt("edad"));
 
                 lista.add(new Usuario(resultado.getInt("id"), resultado.getString("email"), resultado.getString("password"), resultado.getString("nombre"), resultado.getInt("edad")));
 
