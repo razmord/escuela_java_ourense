@@ -53,6 +53,9 @@ public class UsuariosServlet extends HttpServlet {
             }else{
                 response.getWriter().println("ERROR al crear");
             }
+        }else if (request.getMethod()=="GET") {
+        	Usuario usuario =srvUsu.obtenerPorEmail(email);
+        	request.getSession().setAttribute("usuario",usuario);
         }
         
     }
